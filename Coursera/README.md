@@ -9,12 +9,12 @@ Current project focuses on data exploration of Coursera Course Dataset using Pyt
 ## Dataset Information
 - **Source**: https://www.kaggle.com/datasets/siddharthm1698/coursera-course-dataset/data
 - **Description**: The dataset contains the following:  
-- Course title
-- Organization which provides the course
-- Certificate type of the course
-- Course rating
-- Course Difficulty
-- Number of students enrolled onto the course
+    - Course title
+    - Organization which provides the course
+    - Certificate type of the course
+    - Course rating
+    - Course Difficulty
+    - Number of students enrolled onto the course
 - **Number of Observations After Data Pre-Processing**: 891.
 - **Number of Features  After Data Pre-Processing**: 10.
 
