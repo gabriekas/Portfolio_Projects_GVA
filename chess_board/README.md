@@ -18,14 +18,15 @@ To run current programme, the following is required:
 
 ## Demonstration
 1. After running the programme, the user is introduced with the game setting and aim. The user is then prompted to allocate a white figure to the chess board by entering name of the figure and its coordinates. Board state is also printed for visualisation purposes.  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_1.png)
+![Game Demo 1](Portfolio_Projects_GVA/chess_board/Game_demo_1.png)
 2. Once user inputs the name of the white figure and its coordinates, programme prints the board state to clearly illustrate where the figure stands. It also notifies the user that the figure was added successfully.  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_2.png)
+![Game Demo 2](Portfolio_Projects_GVA/chess_board/Game_demo_2.png)
 3. User is then prompted to allocate black figure to the chess board by entering name of the figure and its coordinates.  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_3.png)
+![Game Demo 3](Portfolio_Projects_GVA/chess_board/Game_demo_3.png)
 4. Once the user inputs the name of the black figure and its coordinates, programme prints the board state to clearly understand where the figures stand. It also notifies the user that the figure is added successfully and that it is possible to add 15 more figures or finish the game by entering 'done'.  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_4.png)
-5. ![**For demonstration purposes let's add 1 more black figure.**](Portfolio_Projects_GVA/chess_board/Game_demo_5.png)
+![Game Demo 4](Portfolio_Projects_GVA/chess_board/Game_demo_4.png)
+5. **For demonstration purposes let's add 1 more black figure.**  
+![Game Demo 5](Portfolio_Projects_GVA/chess_board/Game_demo_5.png)
 6. Once the user is satisfied with the board view, the game can be finished by entering 'done'.  
 7. After hitting 'done', the programme notifies the player that all figures have been added successfully and prints final view of the chess board. Finally and most importantly, programme reveals coordinates of the figures which can be captured.  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_7.png)
+![Game Demo 7](Portfolio_Projects_GVA/chess_board/Game_demo_7.png)
