@@ -6,7 +6,7 @@ Current project focuses on data exploration of Coursera Course Dataset using Pyt
 ## Disclaimer
  _The project was performed for learning purposes. Additionally, the dataset was scraped on May 2020, hence, provided insights should not be taken as current of professional advice._  
 
- _Analysis contains interactive graphs. To access the full view please visit:_   https://gabriekas.github.io/Portfolio_Projects_GVA/
+ **_Analysis contains interactive graphs. To access the full view please visit:_ **  https://gabriekas.github.io/Portfolio_Projects_GVA/
 
 ## Dataset Information
 - **Source**: https://www.kaggle.com/datasets/siddharthm1698/coursera-course-dataset/data
