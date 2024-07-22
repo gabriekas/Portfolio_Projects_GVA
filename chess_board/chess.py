@@ -24,9 +24,9 @@ def main():
     #5. Check which black pieces if any can be taken by white piece and print the answer
     pieces_that_can_be_taken = check_for_taken_pieces(board_list, player_inputs)
     if pieces_that_can_be_taken:
-        print("Pieces that can be taken:\n", pieces_that_can_be_taken)
+        print("Figures that can be taken:\n", pieces_that_can_be_taken)
     else:
-        print("No pieces can be taken this time\n")
+        print("No figures can be taken this time.\n")
 
 
 #Define function for board initialization
@@ -124,39 +124,40 @@ def check_for_taken_pieces(board_list, player_inputs):
     white_coords = coord_to_index(player_inputs[0][1])
     captures = []
     if player_inputs[0][0] == "pawn":
-
-        if board_list[white_coords[0]+1][white_coords[1]+1] != " " and board_list[white_coords[0]+1][white_coords[1]+1] != "WP":
-            captures.append(index_to_coord((white_coords[0]+1),(white_coords[1]+1)))
-        if board_list[white_coords[0]+1][white_coords[1]-1] != " " and board_list[white_coords[0]+1][white_coords[1]+1] != "WP":
-            captures.append(index_to_coord((white_coords[0]+1),(white_coords[1]-1)))
-
+        try:
+            if board_list[white_coords[0]+1][white_coords[1]+1] != " " and board_list[white_coords[0]+1][white_coords[1]+1] != "♙":
+                captures.append(index_to_coord((white_coords[0]+1),(white_coords[1]+1)))
+            if board_list[white_coords[0]+1][white_coords[1]-1] != " " and board_list[white_coords[0]+1][white_coords[1]+1] != "♙":
+                captures.append(index_to_coord((white_coords[0]+1),(white_coords[1]-1)))
+        except IndexError:
+            print("\nFigure has reached end of the board.")
    #If figure is rook
     elif player_inputs[0][0] == "rook":
         #Check rows above the white rook
         for row in range(white_coords[0], -1, -1):
             if board_list[row][white_coords[1]] != " "\
-                    and board_list[row][white_coords[1]] != "WR":
+                    and board_list[row][white_coords[1]] != "♖":
                 captures.append(index_to_coord(row,white_coords[1]))
                 break 
 
         #Check rows below the white rook
         for row in range(white_coords[0], 8):
             if board_list[row][white_coords[1]] != " "\
-                    and board_list[row][white_coords[1]] != "WR":
+                    and board_list[row][white_coords[1]] != "♖":
                 captures.append(index_to_coord(row,white_coords[1]))
                 break
 
         #Check columns from the left of the white rook
         for col in range(white_coords[1], -1, -1):
             if board_list[white_coords[0]][col] != " "\
-                    and board_list[white_coords[0]][col] != "WR":
+                    and board_list[white_coords[0]][col] != "♖":
                 captures.append(index_to_coord(white_coords[0],col))
                 break
 
         #Check columns from the right of the white rook
         for col in range(white_coords[1], 8):
             if board_list[white_coords[0]][col] != " "\
-                and board_list[white_coords[0]][col] != "WR":
+                and board_list[white_coords[0]][col] != "♖":
                 captures.append(index_to_coord(white_coords[0],col))
                 break 
 
