@@ -8,7 +8,7 @@ Current project focuses on data exploration of Coursera Course Dataset using Pyt
 
 ## Dataset Information
 - **Source**: https://www.kaggle.com/datasets/siddharthm1698/coursera-course-dataset/data
-- **Description**: 
+- **Description**:  
 The dataset contains the following information:  
     - Course title
     - Organization which provides the course
