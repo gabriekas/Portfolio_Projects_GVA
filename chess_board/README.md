@@ -4,7 +4,7 @@
 Current project aims to answer one question "Which black chess figures can be captured by the white chess figure on a given chess board state?".  
 To answer project's question, a Python programme was implemented. Programme prompts the user to alocate chess figures on the chess board and returns coordinates of the figures that can be captured if any.  
 
-_The programme was created with little background in chess game, thus, displaying unconventional layout of the grame. The following is assumed:_
+_The programme was created with little background in chess game, thus, displaying unconventional layout of the game. The following is assumed:_
 - The only figures to be present on the chess board are either pawn or rook.
 - Only 1 white figure (pawn/rook) can be present.
 - No less than 1 and no more than 16 black figures (pawn/s or rook/s) can be present.
