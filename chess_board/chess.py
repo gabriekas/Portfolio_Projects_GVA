@@ -2,7 +2,7 @@
 def main():
 
     print("\nCurrent chess game setting is based on a combination of pawns and rooks only\n")
-    print("\nAim: to answer whether white chess figure can take any black figures\n")
+    print("\nAim: Answer which black figures can be taken by a white figure if any\n")
 
     #List of possible colours of the figures
     colour = ["white", "black"]
@@ -78,7 +78,7 @@ def ask_for_user_input(colour, board_state):
             inputs.append((figure, coordinates, "B"))
             board_state = update_board_state(board_state, (figure, coordinates, "B"))
             print_board(board_state)
-            print (f"{colour[1].title()} figure has been added successfully, you can add {17-n} more figures or enter 'done'\n")
+            print (f"{colour[1].title()} figure has been added successfully, you can add {17-n} more figures or finish the game by entering 'done'\n")
     return inputs
 
 #Validate user input
