@@ -34,7 +34,6 @@ To run current programme, the following is required:
 
 ![Game Demo 5](Game_demo_5.png)
 6. Once the user is satisfied with the board view, the game can be finished by entering 'done'.  
-
 7. After hitting 'done', the programme notifies the player that all figures have been added successfully and prints final view of the chess board. Finally and most importantly, programme reveals coordinates of the figures which can be captured.  
 
 ![Game Demo 7](Game_demo_7.png)
