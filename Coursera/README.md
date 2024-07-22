@@ -4,7 +4,7 @@
 Current project focuses on data exploration of Coursera Course Dataset using Python. The project aims to uncover insights that would help to understand the dataset, identify patterns that may influence course popularity and complement further analysis. 
 
 ## Disclaimer
- _The project was performed for learning purposes. Additionally, the dataset was scraped on May 2020, hence, provided insights should not be taken as current of professional advice._  
+ _The project was performed for learning purposes. Additionally, the dataset was scraped on May 2020, hence, provided insights should not be taken as current or professional advice._  
 
  **Analysis contains interactive graphs. To access the full view please visit:**  https://gabriekas.github.io/Portfolio_Projects_GVA/
 
