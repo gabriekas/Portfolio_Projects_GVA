@@ -28,39 +28,39 @@ To run current analysis, the following is required:
 ## Contents
 1. Download the Coursera Course Dataset from Kaggle  
 2. Initialisation
-3. Data Cleaning
-    3.1. Handle Missing Data
-    3.2. Handle Duplicate Data
-    3.3. Treating the Outliers
-    3.4. Data Categorization and Categorical Encoding
-4. Exploratory Data Analysis
-    4.1. Initial observations of the Dataset
-    4.2. Which features are categorical and which are numerical?
-    4.3. Which courses are the most popular (by student enrollment)?
-    4.4. Which courses are the most popular (by course rating)?
-    4.5. How does student enrollment compare to top courses by enrollment and top courses by rating?
-    4.6. What are the ratings and difficulty levels of courses with highest enrollment?
-    4.7. Which courses are the least popular (by student enrollment)?
-    4.8. Which courses are the least popular (by course rating)?
-    4.9. How does student enrollment compare to least popular courses by enrollment and least popular courses by rating?
-    4.10. How does rating affect enrollment? Is there a correlation?
-    4.11. Which organizations offer the most popular courses(by student enrollment)?  
-    How many courses these organizations provide in total?  
-    How the numbers compare to mean and median?
-    4.12. Which certification types are most common?
-    4.13. Which organizations provide professional certificates?
-    4.14. How certitifation types compare across top organizations by student enrollment?
-    4.15. Which organizations offer the highest-rated courses?
-    4.16. How does average rating compare between top organizations by student enrollment and top organizations by rating?
-    4.17. Do higher difficulty courses have fewer enrollments compared to easier courses?
-    4.18. How do student enrollment vary across different certification types?
-    4.19. Which certification type tends to be associated with higher-rated courses?
-    4.20. Is there a correlation between the difficulty level of a course and its rating?
-    4.21. How does average rating compare to course difficulty?
-    4.22. Are there any organizations that specialize in a particular difficulty level of courses?
-5. Key Takeaways
-6. Actionable Insights
-7. Further Improvement
+3. Data Cleaning  
+    3.1. Handle Missing Data  
+    3.2. Handle Duplicate Data  
+    3.3. Treating the Outliers  
+    3.4. Data Categorization and Categorical Encoding  
+4. Exploratory Data Analysis  
+    4.1. Initial observations of the Dataset  
+    4.2. Which features are categorical and which are numerical?  
+    4.3. Which courses are the most popular (by student enrollment)?  
+    4.4. Which courses are the most popular (by course rating)?  
+    4.5. How does student enrollment compare to top courses by enrollment and top courses by rating?  
+    4.6. What are the ratings and difficulty levels of courses with highest enrollment?  
+    4.7. Which courses are the least popular (by student enrollment)?  
+    4.8. Which courses are the least popular (by course rating)?  
+    4.9. How does student enrollment compare to least popular courses by enrollment and least popular courses by rating?  
+    4.10. How does rating affect enrollment? Is there a correlation?  
+    4.11. Which organizations offer the most popular courses(by student enrollment)?    
+    How many courses these organizations provide in total?    
+    How the numbers compare to mean and median?  
+    4.12. Which certification types are most common?  
+    4.13. Which organizations provide professional certificates?  
+    4.14. How certitifation types compare across top organizations by student enrollment?  
+    4.15. Which organizations offer the highest-rated courses?  
+    4.16. How does average rating compare between top organizations by student enrollment and top organizations by rating?  
+    4.17. Do higher difficulty courses have fewer enrollments compared to easier courses?  
+    4.18. How do student enrollment vary across different certification types?  
+    4.19. Which certification type tends to be associated with higher-rated courses?  
+    4.20. Is there a correlation between the difficulty level of a course and its rating?  
+    4.21. How does average rating compare to course difficulty?  
+    4.22. Are there any organizations that specialize in a particular difficulty level of courses?  
+5. Key Takeaways  
+6. Actionable Insights  
+7. Further Improvement  
 
 ## Key Takeways of the Analysis
 - "Machine Learning" course had the highest number of students enrolled (3.2M) whilst "El Abogado del Futuro: Legaltech y la Transformacion Digital del Derecho" had the least number of students enrolled (1.5k). Number of students enrolled to both courses are way above and below the mean (90,522), respectively.
