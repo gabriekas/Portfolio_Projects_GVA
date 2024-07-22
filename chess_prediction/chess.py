@@ -101,9 +101,18 @@ def entry_validity(figure, coordinates, taken_coordinates):
 def update_board_state(board_state, player_input):
 
     figure, coordinates, type = player_input
+    if figure == "pawn" and type == "W":
+        figure_symbol = "♙"
+    elif figure == "pawn" and type == "B":
+        figure_symbol = "♟"
+    elif figure == "rook" and type == "W":
+        figure_symbol = "♖"
+    elif figure == "rook" and type == "B":
+        figure_symbol = "♜"
+    else:
+        None
     x_coordinate, y_coordinate = coord_to_index(coordinates)
-    #inidication of the figure - type = B or W, indicating black or white, 1st letter of figure indicates which piece it is pawn or rook
-    board_state[x_coordinate][y_coordinate] = type + figure[0].upper()
+    board_state[x_coordinate][y_coordinate] = figure_symbol
 
     return board_state
 
