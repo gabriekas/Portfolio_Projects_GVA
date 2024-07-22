@@ -25,8 +25,7 @@ To run current programme, the following is required:
 ![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_3.png)
 4. Once the user inputs the name of the black figure and its coordinates, programme prints the board state to clearly understand where the figures stand. It also notifies the user that the figure is added successfully and that it is possible to add 15 more figures or finish the game by entering 'done'.  
 ![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_4.png)
-5. **For demonstration purposes let's add 1 more black figure.**  
-![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_5.png)
+5. ![**For demonstration purposes let's add 1 more black figure.**](Portfolio_Projects_GVA/chess_board/Game_demo_5.png)
 6. Once the user is satisfied with the board view, the game can be finished by entering 'done'.  
 7. After hitting 'done', the programme notifies the player that all figures have been added successfully and prints final view of the chess board. Finally and most importantly, programme reveals coordinates of the figures which can be captured.  
 ![Alt text](Portfolio_Projects_GVA/chess_board/Game_demo_7.png)
