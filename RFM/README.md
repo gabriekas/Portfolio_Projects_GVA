@@ -3,7 +3,8 @@
 ## Project Description
 **RFM Analysis** is an effective method to analyze customer behavior by evaluating recency, frequency and monetary values of customer's purchases. Thus, current project aims to analyse customer behavior for online business specialising in home and garden products, and present insights to the marketing team.  
 
-Analysis was conducted by segmenting customers into 7 groups based on their RFM traits and analysing RFM values.  The groups that customers were segmented into are as follows:   
+Analysis was conducted by segmenting customers into 7 groups based on their RFM traits and analysing RFM values.  The groups that customers were segmented into are as follows:  
+    
     1. _Best Customers_ - completed a recent purchase, buy frequently and spend the most  
     2. _Big Spenders_ - buy frequently and spend a lot of money  
     3. _Loyal Customers_ - recently spent a fair amount of money more than once  
@@ -49,7 +50,8 @@ Example of data after running the query:
 3. Additional SQL query to pull products and their quantities that customers ordered and total sales they generated.  
 Example of data after running the query:
 ![Data Example 4](Data_example_4.png)
-4. Visualising data with Tableau Dashboard
+4. Visualising data with Tableau Dashboard.  
+To access the dashboard please visit: https://public.tableau.com/views/MAT_S3_RFM_GVA/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
 
 ## Key Takeaways
 - Time period analysed - 1 year (from 2010-12-01 to 2011-12-01)
