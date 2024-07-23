@@ -53,4 +53,17 @@ Example of data after running the query:
 To access the dashboard please visit: https://public.tableau.com/views/MAT_S3_RFM_GVA/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
 
 ## Key Takeaways
-- Time period analysed - 1 year (from 2010-12-01 to 2011-12-01)
+- Time period analysed - 1 year (from 2010-12-01 to 2011-12-01).
+- Online business in question attracts customers from a wide variety of countries. However, majority of customers (3,889 out of 4,300) are based in the United Kingdom.
+- "Best Customers" is the biggest segment accounting for 26.07% of all customers. On average each customer in this segment spent 5,411 USD, ordered at least 10 times and 13.9 days ago.
+ - "Promising Customers" is the smallest segment and accounts only for 3.65% of all customers. Customers in this segment ordered most recently, i.e. 13.6 days ago but made only one purchase. On average customer in this segment spends 485 USD.
+- "Lost Customers" account for 17.19% of all customers and are unlikely to return. Customers in this segment made their last purchase 254.8 days ago on average and spent least - on average customer spent only 242 USD.
+- "Loyal Customers" account for 18.88% of all customers. Customers in this did not spent so much on their orders (on average 378 USD per customer) but they do orders are fairly frequent.
+- "Big Spenders" account for 12.02% of all customers. On average they have spent 1,766 USD per customer, they order frequently and their most recent order was made 64.6 days ago.
+- "Cannot be Lost" account for just 4.07% of all customers. Customers in  this segment spend most after the "Best Customers" with an average of 2,170 USD per customer. However, they do not order very frequently and on average, their last order was made 221.9 days ago.
+
+## Insights for the Marketing Team
+- It is advised to focus on "Best Customers", "Big Spenders" and "Cannot be Lost" customer segments as they generate the highest monetary value (sales) for the business in question.
+- To maintain customers in "Best Customers" segment it is advised to reward them with special discounts or offer to become early adopters of a new products.
+- To maintain customers in "Big Spenders" segment it is advised to upsell by offering high value items for customers in this segment and ask for reviews.
+- To maintain customers in "Cannot be Lost" segment it is advised to make them more aware of the business brand. Customers in this sergment could be offered gifts and free trials.
