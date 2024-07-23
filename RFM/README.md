@@ -66,6 +66,6 @@ To access the dashboard please visit: https://public.tableau.com/views/MAT_S3_RF
 
 ## Insights for the Marketing Team
 - It is advised to focus on "Best Customers", "Big Spenders" and "Cannot be Lost" customer segments as they generate the highest monetary value (sales) for the business in question.
-- To maintain customers in "Best Customers" segment it is advised to reward them with special discounts or offer to become early adopters of a new products.
+- To maintain customers in "Best Customers" segment it is advised to reward them with special discounts for their favourite products like _Regency cakestand 3 tier_ or offer to become early adopters of a new products.
 - To maintain customers in "Big Spenders" segment it is advised to upsell by offering high value items for customers in this segment and ask for reviews.
-- To maintain customers in "Cannot be Lost" segment it is advised to make them more aware of the business brand. Customers in this sergment could be offered gifts and free trials.
+- To maintain customers in "Cannot be Lost" segment it is advised to make them more aware of the business brand. Customers in this sergment could be offered gifts and free trials for postage.
