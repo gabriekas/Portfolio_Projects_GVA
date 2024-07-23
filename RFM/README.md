@@ -50,6 +50,8 @@ Example of data after running the query:
 Example of data after running the query:
 ![Data Example 4](Data_example_4.png)
 4. Visualising data with Tableau Dashboard.  
+Example of how Tableau Dashboard looks like:
+![Dashboard Example](Dashboard_example.png)   
 To access the dashboard please visit: https://public.tableau.com/views/MAT_S3_RFM_GVA/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
 
 ## Key Takeaways
