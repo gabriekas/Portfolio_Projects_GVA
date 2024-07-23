@@ -1,6 +1,6 @@
-# Portfolio Projects Reposity
+# Portfolio Projects Repository
 
-This repository holds folders with portfolio projects to showcase SQL, Python and data visualisation skills.  
+This repository holds 4 folders, each with a portfolio project to showcase SQL, Python and data visualisation skills.  
 
 Each folder contains all the necessary files to preview the project from very start to the end. Each folder also holds README file where more detail about the project is provided.
 
