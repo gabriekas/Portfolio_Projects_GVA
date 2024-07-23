@@ -1,14 +1,16 @@
 # Customer Segmentation and Recency, Frequency and Monetary Analysis with SQL and Tableau
 
 ## Project Description
-**RFM Analysis* is an effective method to analyze customer behavior by evaluating recency, frequency and monetary values of customer's purchases. Thus, current project aims to analyse customer behavior for online business specialising in home and garden products, and present insights to the marketing team. Analysis was conducted by segmenting customers into 7 groups based on their RFM traits and analysing RFM values.  The groups that customers were segmented into are as follows:  
-    1. _Best Customers_ - completed a recent purchase, buy frequently and spend the most
-    2. _Big Spenders_ - buy frequently and spend a lot of money
-    3. _Loyal Customers_ - recently spent a fair amount of money more than once
-    4. _Promising Customers_ - completed a recent purchase but do not order often
-    5. _Customers at Risk_ - completed big and recent purchases long ago
-    6. _Cannot be Lost_ - completed huge, frequent purchases long ago but have not returned
-    7. _Lost Customers_ - lowest scores in recency, frequency and monetary values
+**RFM Analysis** is an effective method to analyze customer behavior by evaluating recency, frequency and monetary values of customer's purchases. Thus, current project aims to analyse customer behavior for online business specialising in home and garden products, and present insights to the marketing team.  
+
+Analysis was conducted by segmenting customers into 7 groups based on their RFM traits and analysing RFM values.  The groups that customers were segmented into are as follows:   
+    1. _Best Customers_ - completed a recent purchase, buy frequently and spend the most  
+    2. _Big Spenders_ - buy frequently and spend a lot of money  
+    3. _Loyal Customers_ - recently spent a fair amount of money more than once  
+    4. _Promising Customers_ - completed a recent purchase but do not order often  
+    5. _Customers at Risk_ - completed big and recent purchases long ago  
+    6. _Cannot be Lost_ - completed huge, frequent purchases long ago but have not returned  
+    7. _Lost Customers_ - lowest scores in recency, frequency and monetary values  
 
 ## Dataset Information
 - **Source**: Internal data, using *turing_data_analytics.rfm*
