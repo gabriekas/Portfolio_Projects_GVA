@@ -1,6 +1,9 @@
--- 1.1_v2
+
+-- Request 1. Detailed overview of all individual customers
+
 
 WITH
+-- Determine the latest address of the customer
   latest_address AS (
   SELECT
     DISTINCT c.CustomerID,
@@ -13,7 +16,8 @@ WITH
     a.AddressID = c.AddressID
   GROUP BY
     c.CustomerID),
-  --CTE used to determine the latest customer' address
+ 
+-- Create additional CTE with aggregations to avoid grouping of all other columns in the main SELECT statement
   orders_by_customer AS (
   SELECT
     CustomerID,
@@ -23,7 +27,11 @@ WITH
   FROM
     `tc-da-1.adwentureworks_db.salesorderheader`
   GROUP BY
-    CustomerID) --Another CTE to avoid grouping of all other columns in the main SELECT statement
+    CustomerID
+    ) 
+
+ -- Main query with requested data
+
 SELECT
   individual_customers.CustomerID,
   customers_contact.Firstname,
@@ -79,13 +87,15 @@ ON
   customer.CustomerID = orders_by_customer.CustomerID
 ORDER BY
   orders_by_customer.total_amount DESC
-LIMIT
-  200
 
 
---1.2_v2
+
+-- Request 2. Top 200 customers with highest total amount (with tax) who did not order over the last year
+
+
 
 WITH
+-- Determine the latest address of the customer
   latest_address AS (
   SELECT
     DISTINCT c.CustomerID,
@@ -98,7 +108,9 @@ WITH
     a.AddressID = c.AddressID
   GROUP BY
     c.CustomerID),
-  --CTE used to determine the latest customer' address
+
+
+-- Create additional CTE with aggregations to avoid grouping of all other columns in the main SELECT statement
   orders_by_customer AS (
   SELECT
     CustomerID,
@@ -108,7 +120,9 @@ WITH
   FROM
     `tc-da-1.adwentureworks_db.salesorderheader`
   GROUP BY
-    CustomerID) --Another CTE to avoid grouping of all other columns in the main SELECT statement
+    CustomerID) 
+
+ -- Main query with requested data   
 SELECT
   individual_customers.CustomerID,
   customers_contact.Firstname,
@@ -164,18 +178,21 @@ ON
   customer.CustomerID = orders_by_customer.CustomerID
 WHERE
   orders_by_customer.date_last_order < (
+  -- Subquery to identify date for the latest order 1 year prior
   SELECT
     DATE_SUB(MAX(orderDate), INTERVAL 365 day) year_prior_latest_order
   FROM
-    `tc-da-1.adwentureworks_db.salesorderheader`) --subquery used to calculate the date of the latest order and the actual date of 365 days prior the date of the latest order
+    `tc-da-1.adwentureworks_db.salesorderheader`) 
 ORDER BY
   orders_by_customer.total_amount DESC
 LIMIT
   200
 
 
---1.3_v2
+-- Request 3. Active and inactive customers.
 
+
+-- Determine the latest address of the customer
 WITH
   latest_address AS (
   SELECT
@@ -189,7 +206,8 @@ WITH
     a.AddressID = c.AddressID
   GROUP BY
     c.CustomerID),
-  --CTE used to determine the latest customer' address
+  
+  -- Create additional CTE with aggregations to avoid grouping of all other columns in the main SELECT statement
   orders_by_customer AS (
   SELECT
     CustomerID,
@@ -199,7 +217,9 @@ WITH
   FROM
     `tc-da-1.adwentureworks_db.salesorderheader`
   GROUP BY
-    CustomerID) --Another CTE to avoid grouping of all other columns in the main SELECT statement
+    CustomerID) 
+
+-- Main query with request data
 SELECT
   individual_customers.CustomerID,
   customers_contact.Firstname,
@@ -264,13 +284,13 @@ ON
   customer.CustomerID = orders_by_customer.CustomerID
 ORDER BY
   customer.CustomerID DESC
-  LIMIT 500
 
 
---1.4_v2
+-- Request 4. Top active customers from North America.
 
 
 WITH
+-- Determine the latest address of the customer
   latest_address AS (
   SELECT
     DISTINCT c.CustomerID,
@@ -283,7 +303,9 @@ WITH
     a.AddressID = c.AddressID
   GROUP BY
     c.CustomerID),
-  --CTE used to determine the latest customer' address
+
+
+-- Create additional CTE with aggregations to avoid grouping of all other columns in the main SELECT statement
   orders_by_customer AS (
   SELECT
     CustomerID,
@@ -293,7 +315,9 @@ WITH
   FROM
     `tc-da-1.adwentureworks_db.salesorderheader`
   GROUP BY
-    CustomerID) --Another CTE to avoid grouping of all other columns in the main SELECT statement
+    CustomerID)
+
+-- Main query with requested data    
 SELECT
   individual_customers.CustomerID,
   customers_contact.Firstname,
@@ -365,10 +389,11 @@ ON
 WHERE
   sales_territory.Group = 'North America'
   AND orders_by_customer.date_last_order > (
+-- Subquery to filter ou only active customers
   SELECT
     DATE_SUB(MAX(orderDate), INTERVAL 365 day) year_prior_latest_order
   FROM
-    `tc-da-1.adwentureworks_db.salesorderheader`) --Subquery for filtering only active customers
+    `tc-da-1.adwentureworks_db.salesorderheader`) 
   AND (orders_by_customer.total_amount >= 2500
     OR orders_by_customer.no_of_orders >=5)
 ORDER BY
@@ -377,7 +402,7 @@ ORDER BY
   orders_by_customer.date_last_order
 
 
---2.1_v2
+-- Request 5. Monthly sales numbers
 
 
 SELECT
@@ -399,7 +424,9 @@ GROUP BY
   CountryRegionCode,
   Region
 
---2.2_v2
+
+-- Request 6. Cumulative sum of the total amount earned with tax per country and region
+
 
 WITH
   t1 AS (
@@ -428,7 +455,7 @@ FROM
   t1
 
 
---2.3_v2
+-- Request 7. Monthly country rank by sales
 
 
 WITH
@@ -459,7 +486,7 @@ FROM
   t1
 
 
---2.4_v2
+-- Request 8. Taxes on a country level
 
 
 WITH
@@ -486,6 +513,7 @@ WITH
   SELECT
     province.CountryRegionCode country,
     province.Name province,
+  -- Selecting highest tax rate since some state have multiple tax rates
     MAX(tax_rate.TaxRate) Tax_rate
   FROM
     `tc-da-1.adwentureworks_db.stateprovince` province
@@ -505,8 +533,10 @@ SELECT
   t1.Total_w_tax,
   DENSE_RANK() OVER (PARTITION BY t1.Region ORDER BY t1.Total_w_tax DESC) country_sales_rank,
   SUM(t1.Total_w_tax) OVER (PARTITION BY t1.Region ORDER BY t1.order_month) cumulative_sum,
+-- Mean tax rate to represent average tax rate in a country as taxes may vary accros provinces
   ROUND(AVG(t2.Tax_rate),1) mean_tax_rate,
-  ROUND(COUNT(t2.Tax_rate)/COUNT(t2.province),2) per_provinces_w_tax
+-- Percentage of provinces with available tax
+  ROUND(COUNT(t2.Tax_rate)/COUNT(t2.province),2) perc_provinces_w_tax
 FROM
   t1
 INNER JOIN
