@@ -1,15 +1,22 @@
 WITH
+
 -- Computation for Frequency & Monetary
+
 F_and_M AS (
 SELECT CustomerID,
 MAX(DATE(InvoiceDate)) AS last_purchase_date,
 COUNT(DISTINCT InvoiceNo) AS frequency,
 SUM (UnitPrice*Quantity) AS monetary
 FROM `tc-da-1.turing_data_analytics.rfm`
-WHERE InvoiceDate < '2011-12-02' --Selects date range from 2010-12-01 to 2011-12-01
-AND Quantity > 0 --Filters out damaged, wrongly sold orders etc.
-AND UnitPrice > 0 --Filters out debt adjustments
-AND CustomerID IS NOT NULL --Filters out customers without ID
+--Select date range from 2010-12-01 to 2011-12-01
+--(the earliest invoice date available in the data set it 2010-12-01)
+WHERE InvoiceDate < '2011-12-02'
+--Filter out damaged, wrongly sold orders, etc.
+AND Quantity > 0 
+--Filter out debt adjustments
+AND UnitPrice > 0
+--Filter out customers without ID
+AND CustomerID IS NOT NULL 
 GROUP BY CustomerID
 ),
 
@@ -20,7 +27,8 @@ SELECT *,
 DATE_DIFF(reference_date, last_purchase_date, DAY) AS recency
 FROM (
   SELECT *,
-  MAX(last_purchase_date) OVER () AS reference_date --Sets reference date as 2011-12-01 as per TC task
+  --Set reference date as 2011-12-01 
+  MAX(last_purchase_date) OVER () AS reference_date 
   FROM F_and_M)
   ),
 
