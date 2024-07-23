@@ -4,6 +4,7 @@
 **RFM Analysis** is an effective method to analyze customer behavior by evaluating recency, frequency and monetary values of customer's purchases. Thus, current project aims to analyse customer behavior for online business specialising in home and garden products, and present insights to the marketing team.  
 
 Analysis was conducted by segmenting customers into 7 groups based on their RFM traits and analysing RFM values.  The groups that customers were segmented into are as follows:   
+
     1. _Best Customers_ - completed a recent purchase, buy frequently and spend the most  
     2. _Big Spenders_ - buy frequently and spend a lot of money  
     3. _Loyal Customers_ - recently spent a fair amount of money more than once  
